@@ -1,0 +1,59 @@
+﻿@model IEnumerable<NicolasCasamen_Examen1P.Models.NC_Cine>
+
+@{
+    ViewData["Bienvenido al cine de Nicolas"] = "Porfavor selecciona tu Pelicula";
+}
+
+<h1>Bienvenido al Cine de Nicolas</h1>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.NC_Pelicula)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.NC_FechaPelicula)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.NC_Entradas)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.NC_Socio)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.NC_Costo)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.NC_Pelicula)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.NC_FechaPelicula)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.NC_Entradas)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.NC_Socio)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.NC_Costo)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.NC_NumeroBoleto">Edit</a> |
+                <a asp-action="Details" asp-route-id="@item.NC_NumeroBoleto">Details</a> |
+                <a asp-action="Delete" asp-route-id="@item.NC_NumeroBoleto">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

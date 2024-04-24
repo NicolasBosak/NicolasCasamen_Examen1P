@@ -4,7 +4,7 @@ namespace NicolasCasamen_Examen1P.Models
 {
     public class NC_Cine
     {
-        [Required]
+        [Key]
         public int NC_NumeroBoleto { get; set; }
         [Required]
         public String? NC_Pelicula { get; set; }

@@ -1,0 +1,48 @@
+﻿@model NicolasCasamen_Examen1P.Models.NC_Cine
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h1>Details</h1>
+
+<div>
+    <h4>NC_Cine</h4>
+    <hr />
+    <dl class="row">
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.NC_Pelicula)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.NC_Pelicula)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.NC_FechaPelicula)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.NC_FechaPelicula)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.NC_Entradas)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.NC_Entradas)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.NC_Socio)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.NC_Socio)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.NC_Costo)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.NC_Costo)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model?.NC_NumeroBoleto">Edit</a> |
+    <a asp-action="Index">Back to List</a>
+</div>
