@@ -13,7 +13,6 @@ namespace NicolasCasamen_Examen1P.Models
         public DateTime NC_FechaPelicula { get; set; }
         [Required]
         public int NC_Entradas { get; set; }
-        [Required]
         public bool NC_Socio { get; set; }
         [VerificarSocio]
         public decimal NC_Costo { get; set; }
