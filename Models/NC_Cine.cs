@@ -7,6 +7,7 @@ namespace NicolasCasamen_Examen1P.Models
         [Key]
         public int NC_NumeroBoleto { get; set; }
         [Required]
+        [MaxLength(20, ErrorMessage = "Nombre no Valido"), MinLength(5, ErrorMessage = "Nombre no Valido")]
         public String? NC_Pelicula { get; set; }
         [Required]
         public DateTime NC_FechaPelicula { get; set; }
@@ -22,7 +23,7 @@ namespace NicolasCasamen_Examen1P.Models
         public override bool IsValid(object? value)
         {
             decimal valor = (decimal)value;
-            if (valor < 15)
+            if (valor <= 15)
             {
                 return true;
             }
